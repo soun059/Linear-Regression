@@ -1,7 +1,7 @@
-from statistics import mean
-import matplotlib.pyplot as plt
-import numpy as np
-import csv
+from statistics import mean         #module to call mean method or you can use normal mean formula 
+import matplotlib.pyplot as plt     #module to plot the graph
+import numpy as np                  #module to make a numpy array for better computation
+import csv                             #module to open a csv file and taking data from it
 def square_error(y_org,y_line):   #finding the square_error of the models
     return sum((y_line-y_org)**2);
 def coeff_of_det(y_org,y_line):     #finding the co-efficient of determination that is accuracy of the model
@@ -60,8 +60,8 @@ def main():
     print("the accuracy of second model:",comb2);            #accuracy of the normal statistical analysis
     print("the accuracy of gradient descent:",gra);              #accuracy of the gradient descent model
     plt.scatter(x1,y1);
-    plt.plot(x1,y_comb1,color='red');                           
-    plt.plot(x1,y_comb2,color='orange');
-    plt.plot(x1,y_comb1,color='green');
+    plt.plot(x1,y_comb1,color='red');                           #plotting the first model predicting line
+    plt.plot(x1,y_comb2,color='orange');                         #plotting the second model predicting line
+    plt.plot(x1,y_comb1,color='green');                         #plotting the gradient descent model predicting line
     plt.show();
 main();
